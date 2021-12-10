@@ -70,7 +70,6 @@ class MultivariateSample:
             response_header = self.ad_client.detect_anomaly(model_id, detection_req,
                                                             cls=lambda *args: [args[i] for i in range(len(args))])[-1]
             result_id = response_header['Location'].split("/")[-1]
-
             # Get results (may need a few seconds)
             r = self.ad_client.get_detection_result(result_id)
             print("Get detection result...(it may take a few seconds)")
