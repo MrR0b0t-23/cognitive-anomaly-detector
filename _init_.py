@@ -1,7 +1,6 @@
 import os
 import time
 from datetime import datetime, timezone
-
 from azure.ai.anomalydetector import AnomalyDetectorClient
 from azure.ai.anomalydetector.models import DetectionRequest, ModelInfo
 from azure.ai.anomalydetector.models import ModelStatus, DetectionStatus
